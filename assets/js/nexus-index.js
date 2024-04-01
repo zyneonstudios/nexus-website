@@ -22,11 +22,11 @@ function closeApp() {
 }
 
 function maximizeApp() {
-    window.location.href = "../app";
+    window.location.href = "https://nexus.zyneonstudios.com/app";
 }
 
 function minimizeApp() {
-    window.location.href = "application.html";
+    window.location.href = "https://nexus.zyneonstudios.com/application.html";
 }
 
 function resolveParameters() {
