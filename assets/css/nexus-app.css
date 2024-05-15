@@ -14,3 +14,11 @@ body {
 .content .header .header-content {
     display: flex;
 }
+
+a.text-link {
+    color: #8962ff !important;
+}
+
+a.text-link:hover {
+    color: #cbbbff !important;
+}
