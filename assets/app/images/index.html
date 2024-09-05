@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Image selector</title>
+        <style>
+            body {
+                user-select: none;
+                font-family: Arial,serif;
+                background: #1f1f20;
+                color: white;
+                padding: 0.5rem;
+
+                * {
+                    transition: all 0.25s ease;
+                    border-radius: 0.5rem;
+                }
+
+                .flex {
+                    position: relative;
+                    display: flex;
+                    background: #101010;
+                    justify-content: right;
+                    overflow: hidden;
+                    white-space: nowrap;
+
+                    a {
+                        p {
+                            position: absolute;
+                            background: dodgerblue;
+                            padding: 0.5rem;
+                            top: -0.4rem;
+                            right: 22.5rem;
+                            z-index: 3000;
+                        }
+
+                        p:hover {
+                          cursor: pointer;
+                            background: lightskyblue;
+                            color: black;
+                        }
+                    }
+
+                    h3 {
+                        position: absolute;
+                        left: 1rem;
+                        top: -0.25rem
+                    }
+
+                    select {
+                        position: relative;
+                        z-index: 1000;
+                        background: #000000;
+                        color: white;
+                        padding: 1rem;
+                        border: none !important;
+                        border-radius: 0;
+                        font-weight: 1000;
+
+                        option {
+                            background: #454545;
+                        }
+                    }
+
+                    select:hover {
+                        cursor: pointer;
+                        background: #454545;
+                    }
+                }
+
+                .image {
+                    background: #101010;
+                    position: absolute;
+
+                    width: calc(100% - 2rem);
+                    height: calc(100% - 6rem);
+
+                    bottom: 1rem;
+                    left: 1rem;
+
+                    padding: 0;
+                    margin: 0;
+                    border: none;
+
+                    a#download {
+                        display: none;
+                    }
+
+                    img {
+                        user-select: all;
+                        width: calc(100% - 2rem);
+                        height: calc(100% - 2rem);
+                        padding: 1rem;
+                        object-fit: contain;
+                    }
+                }
+            }
+        </style>
+        <script>
+            let id = undefined; let image = undefined; let url = undefined;
+            addEventListener("DOMContentLoaded", () => {
+                document.getElementById("id-select").onchange = function () {
+                    sync();
+                }
+
+                document.getElementById("image-select").onchange = function () {
+                    sync();
+                }
+
+                document.querySelector("p").onclick = function () {
+                    download();
+                }
+
+                sync();
+            });
+
+            function sync() {
+                id = document.getElementById("id-select").value;
+                image = document.getElementById("image-select").value;
+                url = "instances/"+id+"/"+image+".webp"
+                document.getElementById("image").src = url;
+            }
+
+            function download() {
+                const link = document.getElementById("download");
+                link.href = url;
+                link.download = id+"-"+image+".webp";
+                link.click();
+            }
+        </script>
+    </head>
+    <body>
+        <div class="flex">
+            <h3>NEXUS App - Image viewer</h3>
+            <a><p>Download</p></a>
+            <label>
+                <select id="id-select">
+                    <option value="argria2">Argria II</option>
+                    <option value="primal">Primal</option>
+                    <option value="primal-lite">Primal (lite)</option>
+                    <option value="primal3">Primal 3</option>
+                    <option value="projectz">Project'Z</option>
+                    <option value="projectz2">Project'Z II (old)</option>
+                    <option value="projectz3">Project'Z III (old)</option>
+                    <option value="projectz3-test">Project'Z III (test)</option>
+                    <option value="projectz3-zyneon">Project'Z III (zyneon)</option>
+                    <option value="ukzp">UKZP</option>
+                    <option value="ukzp-lite">UKZP (lite)</option>
+                </select>
+            </label>
+            <label>
+                <select id="image-select">
+                    <option value="background">Background</option>
+                    <option value="icon">Icon</option>
+                    <option value="logo">Logo</option>
+                    <option value="thumbnail">Thumbnail</option>
+                </select>
+            </label>
+        </div>
+        <div class="image">
+            <a id="download"></a>
+            <img id="image" alt="dynamic image view" src="">
+        </div>
+    </body>
+</html>
