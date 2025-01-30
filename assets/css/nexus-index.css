@@ -54,19 +54,29 @@ body {
 }
 
 .content .header .header-content #application .app_titlebar .app_buttons {
-    padding: 0.375rem;
-    text-align: right;
-}
+    display: flex;
+    position: absolute;
+    width: max-content !important;
+    height: 100%;
+    right: 0;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    border-top-right-radius: 0.45rem;
 
-.content .header .header-content #application .app_titlebar .app_buttons a {
-    padding: 0.375rem;
-    color: lightgray;
-}
+    a {
+        position: relative;
+        overflow: hidden;
+        padding: 0.4rem 0.5rem;
+    }
 
-.content .header .header-content #application .app_titlebar .app_buttons a:hover {
-    color: white;
-}
+    a.close {
+        font-size: 1.75rem;
+        padding: 0.2rem 0.3rem;
+    }
 
-.content .header .header-content #application .app_titlebar .app_buttons a.close:hover {
-    color: red;
+    a:hover {
+        background: #ffffff10;
+        cursor: pointer;
+    }
 }
