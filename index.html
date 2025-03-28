@@ -73,14 +73,14 @@
                         <h5 class="modal-title" id="404-modal">404: Not found...</h5>
                         <button onclick="location.href = 'index.html';" type="button" class="btn-close" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
+                    <div class="modal-body" id="body404">
                         Unfortunately, we couldn't find this page.<br>It may never have existed, or it might have been moved or deleted. <strong>Sorry :/</strong><br><br>
 
                         <strong>Random cat image to calm down:</strong>
                         <img style="border-radius: 4px; box-shadow: 0 0 0.4rem #000000" id="cat" width="100%" alt="random cat image" src="https://cataas.com/cat">
                     </div>
                     <div class="modal-footer">
-                        <button onclick="location.href = 'index.html?popup=404';" type="button" class="btn btn-outline-light">Refresh cat</button>
+                        <button onclick="refreshCat();" type="button" class="btn btn-outline-light">Refresh cat</button>
                         <button onclick="location.href = 'index.html';" type="button" class="btn btn-danger">Okay</button>
                     </div>
                 </div>
@@ -163,5 +163,10 @@
                 }
             }
         });
+
+        function refreshCat() {
+            const body404 = document.getElementById('cat');
+            body404.src = body404.src+"#";
+        }
     </script>
 </html>
