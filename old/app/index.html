@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>Zyneon Studios NEXUS App</title>
+        <link id="shared-css" rel="stylesheet" href="https://zyneonstudios.de/assets/css/shared.css">
+        <link id="icon-css" rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link id="page-css" rel="stylesheet" href="../assets/css/nexus-app-full.css">
+        <link rel="icon" type="image/png" href="https://zyneonstudios.de/assets/images/2024.png"/>
+    </head>
+    <body>
+        <div class="app-titlebar">
+            <div class="app-title">
+                Zyneon Application
+            </div>
+            <div class="app-buttons">
+                <a onclick="hideApp();">-</a>
+                <a onclick="minimizeApp();">▢</a>
+                <a class="close" onclick="closeApp();">X</a>
+            </div>
+        </div>
+        <iframe class="app" src="https://app.nexus.zyneonstudios.de/"></iframe>
+        <div class="footer">
+            <div class="lawstuff"><a href="https://nerotvlive.nerofy.de/de/?s=rechtliches">Imprint</a> and <a href="https://nerotvlive.nerofy.de/de/?s=rechtliches">Privacy</a></div>
+            <div class="copyright">©copyright <a href="https://zyneonstudios.de">Zyneon Studios.</a>All rights reserved.</div>
+        </div>
+        <script src="https://zyneonstudios.de/assets/js/shared.js"></script>
+        <script src="../assets/js/nexus-app.js"></script>
+        <script>resizeTitlebar();</script>
+    </body>
+</html>
