@@ -1,19 +1,23 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Nexus | Zyneon Studios</title>
+        <title>Zyndex (Manager) | Zyneon Nexus</title>
         <link rel="icon" type="image/webp" href="assets/img/icon.png"/>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <script src="assets/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <style>
-
+            * {
+                overflow: hidden !important;
+            }
         </style>
     </head>
     <body data-bs-theme="dark">
-        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgba(var(--bs-body-bg-rgb), 0.75); backdrop-filter: blur(16px); box-shadow: 0 0 1rem #00000080;">
+        <div style="position: fixed; top: 0; left: 0; z-index: 99998; width: 100%; height: 100%; backdrop-filter: blur(16px); box-shadow: 0 0 1rem #00000080;"></div>
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgba(var(--bs-body-bg-rgb), 0.75); backdrop-filter: blur(16px);">
             <div class="container">
                 <div class="navbar-brand d-flex align-items-center justify-content-center" style="position: relative;">
                     <img src="assets/img/icon.png" style="position: absolute; height: 42px; left: 0; top: 0;" alt="...">
@@ -52,12 +56,12 @@
 
         <header style="background-image: url('assets/img/background.png'); background-size: cover; background-position: center; height: 100vh;">
             <div class="d-flex flex-column justify-content-center align-items-center text-center text-white" style="background: #00000050; position: absolute; width: 100%; height: 100%; backdrop-filter: blur(8px); z-index: 0;">
-                <h1 class="display-3 fw-bold">Zyneon Nexus</h1>
-                <h2 class="display-6">The development team of Zyneon Studios.</h2>
+                <h1 class="display-3 fw-bold">Zyndex Manager</h1>
+                <h2 class="display-6 placeholder col-6"></h2>
                 <div class="buttons d-flex justify-content-center align-items-center" style="margin-top: 1rem;">
-                    <button class="btn btn-outline-light m-1" type="button" data-bs-toggle="modal" onclick="window.open('https://github.com/orgs/zyneonstudios/repositories','_blank')">GitHub</button>
-                    <button class="btn btn-primary m-1" type="button" data-bs-toggle="modal" onclick="location.href = 'app.html';">NEXUS App</button>
-                    <button class="btn btn-light m-1" type="button" data-bs-toggle="modal" onclick="location.href = 'https://zyneonstudios.org';">Back</button>
+                    <button class="btn btn-outline-light m-1 placeholder" disabled type="button" data-bs-toggle="modal" onclick="location.href = '#about';">About</button>
+                    <button class="btn btn-primary m-1 placeholder" disabled type="button" data-bs-toggle="modal" onclick="location.href = '#download';" style="overflow: hidden; white-space: nowrap;"><i class="bi bi-download" style="margin-right: 0.75rem;"></i>Download</button>
+                    <button class="btn btn-outline-primary m-1 placeholder" disabled type="button" data-bs-toggle="modal" onclick="location.href = 'https://nexus.zyneonstudios.org/docs/application-api/about';">API</button>
                 </div>
             </div>
         </header>
@@ -66,46 +70,22 @@
             <br>©copyright Zyneon Studios. All rights reserved.
         </footer>
 
-        <div class="modal fade" id="404" tabindex="-1" aria-labelledby="404-modal" aria-hidden="true">
+        <div class="modal fade" id="wip" tabindex="-1" aria-labelledby="wip-modal" aria-hidden="true" style="z-index: 100000;">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="404-modal">404: Not found...</h5>
-                        <button onclick="location.href = 'index.html';" type="button" class="btn-close" aria-label="Close"></button>
+                        <h5 class="modal-title" id="wip-modal">Error</h5>
+                        <button onclick="location.href = 'app.html';" type="button" class="btn-close" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        Unfortunately, we couldn't find this page.<br>It may never have existed, or it might have been moved or deleted. <strong>Sorry :/</strong><br><br>
-
-                        <strong>Random cat image to calm down:</strong>
-                        <img width="100%" alt="random cat image" src="https://cataas.com/cat">
+                        Unfortunately, this page is not yet available, as the NEXUS App module 'Zyndex Manager' is still in development. However, you can view the NEXUS App itself, rather than its modules.
                     </div>
                     <div class="modal-footer">
-                        <button onclick="location.href = 'index.html';" type="button" class="btn btn-danger">Okay</button>
+                        <button onclick="location.href = 'app.html';" type="button" class="btn btn-danger">Okay</button>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="modal fade" id="naa" tabindex="-1" aria-labelledby="naam" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="naam">Authentication started!</h5>
-                        <button data-bs-dismiss="modal" type="button" class="btn-close" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        You can close this tab/window now!<br>
-                        <br>
-                        <strong>Oh, by the way:</strong><br>
-                        Thank you for using the NEXUS App!^^
-                    </div>
-                    <div class="modal-footer">
-                        <button data-bs-dismiss="modal" type="button" class="btn btn-success">Okay</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </body>
     <script>
         window.matchMedia('(prefers-color-scheme: dark)')
@@ -127,40 +107,9 @@
 
         updateTheme();
 
-        document.addEventListener('DOMContentLoaded', function() {
-            let error404 = false;
-            const urlParams = new URLSearchParams(window.location.search);
-            if (window.location.hash.includes('#404')) {
-                error404 = true;
-            } else if(urlParams.has("popup")) {
-                if(urlParams.get("popup")==="404") {
-                    error404 = true;
-                }
-            }
-
-            if(error404) {
-                document.title = "404 | Zyneon Nexus";
-                document.getElementById("404").addEventListener('hidden.bs.modal', function (event) {
-                    document.title = "Nexus | Zyneon Studios";
-                });
-                new bootstrap.Modal(document.getElementById('404')).show("404");
-            } else {
-                let authenticated = false;
-                if (window.location.hash.includes('#authenticated')) {
-                    authenticated = true;
-                } else if(urlParams.has("popup")) {
-                    if(urlParams.get("popup")==="authenticated") {
-                        authenticated = true;
-                    }
-                }
-                if(authenticated) {
-                    document.title = "Successfully authenticated | Zyneon Nexus";
-                    document.getElementById("naa").addEventListener('hidden.bs.modal', function (event) {
-                        document.title = "Nexus | Zyneon Studios";
-                    });
-                    new bootstrap.Modal(document.getElementById('naa')).show("naa");
-                }
-            }
+        document.getElementById("wip").addEventListener('hidden.bs.modal', function (event) {
+            window.location.href = 'app.html';
         });
+        new bootstrap.Modal(document.getElementById('wip')).show("wip");
     </script>
 </html>

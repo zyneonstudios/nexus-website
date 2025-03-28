@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>NEXUS App | Zyneon Nexus</title>
+        <link rel="icon" type="image/webp" href="assets/img/icon.png"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <script src="assets/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <style>
+
+        </style>
+    </head>
+    <body data-bs-theme="dark">
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgba(var(--bs-body-bg-rgb), 0.75); backdrop-filter: blur(16px); box-shadow: 0 0 1rem #00000080;">
+            <div class="container">
+                <div class="navbar-brand d-flex align-items-center justify-content-center" style="position: relative;">
+                    <img src="assets/img/icon.png" style="position: absolute; height: 42px; left: 0; top: 0;" alt="...">
+                    <strong style="margin-left: 3rem;">Zyneon Nexus</strong>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Projects
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">NEXUS App</a></li>
+                                <li><a class="dropdown-item" href="zyndex.html">Zyndex (Manager)</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown" style="margin-right: 1rem;">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Docs
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="https://nexus.zyneonstudios.org/docs/application-api/about">NEXUS App API Documentation</a></li>
+                                <li><a class="dropdown-item" href="https://nexus.zyneonstudios.org/docs/zyndex/about">Zyndex Documentation</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-primary" type="button" data-bs-toggle="modal" onclick="window.location.href = '#download';">Get the NEXUS App</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <header style="background-image: url('assets/img/app-background.png'); background-size: cover; background-position: center; height: 100vh;">
+            <div class="d-flex flex-column justify-content-center align-items-center text-center text-white" style="background: #00000050; position: absolute; width: 100%; height: 100%; backdrop-filter: blur(8px); z-index: 0;">
+                <h1 class="display-3 fw-bold">NEXUS App</h1>
+                <h2 class="display-6">An open source and modular desktop app.</h2>
+                <div class="buttons d-flex justify-content-center align-items-center" style="margin-top: 1rem;">
+                    <button class="btn btn-outline-light m-1" type="button" data-bs-toggle="modal" onclick="location.href = '#about';">About</button>
+                    <button class="btn btn-light m-1" type="button" data-bs-toggle="modal" onclick="location.href = '#modules';">Modules</button>
+                    <button class="btn btn-primary m-1" type="button" data-bs-toggle="modal" onclick="location.href = '#download';"><i class="bi bi-download" style="margin-right: 0.75rem;"></i>Download app</button>
+                    <button class="btn btn-outline-primary m-1" type="button" data-bs-toggle="modal" onclick="location.href = 'https://nexus.zyneonstudios.org/docs/application-api/about';">API</button>
+                </div>
+            </div>
+        </header>
+        <div class="container d-flex justify-content-center align-items-center" style="padding: 2rem 3rem 1rem 3rem;" id="about">
+            <h2>About the <strong>NEXUS App</strong></h2>
+        </div>
+        <div class="container d-flex gap-5 flex-column flex-md-row justify-content-center align-items-center" style="padding: 1rem 1rem 3rem 1rem">
+            <div class="p-2" style="width: 50%; max-width: 50%; position: relative; overflow: hidden;">
+                <img alt="Screenshot of the NEXUS App" src="assets/img/app-screenshot.png" style="width: 100%; height: 100%; box-shadow: 0.2rem 0.2rem 0.4rem #00000075;">
+            </div>
+            <div style="max-width: 50%; width: 50%;">
+                <div class="accordion" id="faq" style="border-radius: 4px; overflow: hidden; box-shadow: 0.2rem 0.2rem 0.4rem #00000075;">
+                    <div class="accordion-item bg-dark-subtle active">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button bg-dark-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What's the NEXUS App?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                            <div class="accordion-body">
+                                <strong>The NEXUS App</strong> started as a Minecraft launcher with the goal of unifying our own index "NEX", based on Zyndex, with CurseForge and Modrinth into a single program. We still maintain these functions with the <a href="https://github.com/danieldieeins/NEXUS-App-Minecraft-module" target="_blank">a Minecraft module</a> module by nerotvlive.
+                                <strong>However</strong>, the NEXUS App is now much more, as we've overhauled it from the ground up and refocused it to be a modular desktop program. This allows the app to serve as a central hub, <code>a "Nexus"</code>, for everything, as it can be expanded in any "direction".
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-dark-subtle">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-dark-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                What is meant by "modular"?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faq">
+                            <div class="accordion-body">
+                                <strong>By "modular"</strong>, we mean that we've equipped the <strong>NEXUS App</strong> with a public and documented <a href="https://nexus.zyneonstudios.org/docs/application-api/about" target="_blank">API</a>, which allows the development of add-on content for the program. The app itself is just a small core optimized to integrate the APIs and load the modules, but it optionally comes with what we consider to be the most recommendable modules available for the app.
+                                <br><strong>In short:</strong> The app's modular structure allows it to do <code>anything</code> a module developer wants to implement. Be it launching games, executing commands, wrapping other programs, or even doing something remotely.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-dark-subtle">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed bg-dark-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Who can create modules?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faq">
+                            <div class="accordion-body">
+                                <strong>You, us - everyone</strong>. The NEXUS App is an <code>open-source</code> program with a <a href="https://nexus.zyneonstudios.org/docs/application-api/about" target="_blank">public and documented API</a>. Anyone who's interested in exploring the subject has the opportunity to develop modules for the app.
+                                <br><br><br>
+
+                                <button class="btn btn-primary m-1" type="button" data-bs-toggle="modal" onclick="location.href = 'https://nexus.zyneonstudios.org/docs/application-api/about';">Learn how to create a module</button><button class="btn btn-outline-light m-1" type="button" data-bs-toggle="modal" onclick="location.href = '#modules';">Explore modules</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-dark-subtle" style="box-shadow: 0 0 1rem #00000099;">
+            <div class="container d-flex justify-content-center align-items-center" style="padding: 2rem 3rem 1rem 3rem;" id="modules">
+                <h2>Explore <strong>Modules</strong></h2>
+            </div>
+            <div class="container d-flex flex-column justify-content-center align-items-center" style="padding-bottom: 3rem">
+                <div class="alert alert-warning" role="alert">
+                    Info: This section is a placeholder, because the NEX api and front end is still under construction.
+                </div>
+                <div class="container-fluid cards d-flex flex-column flex-md-row gap-5" style="width: fit-content;">
+
+                    <div class="card" style="flex: 0 0 auto; width: calc(16rem + 2px); overflow: hidden;">
+                        <div class="image d-flex justify-content-center align-items-center" style="position: relative; height: 9rem; width: 16rem">
+                            <img src="https://i.ibb.co/bvT1wZ3/background.png" alt="..." style="position: absolute; width: 100%; height: 100%; object-fit: cover;">
+                            <img src="https://i.ibb.co/whsHvHF/napp.png" alt="..." style="backdrop-filter: blur(4px); position: absolute; width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">a Minecraft module</h5>
+                            <p class="card-text">An instance based Minecraft launcher with mod support. <br>by <strong>nerotvlive</strong></p>
+
+                            <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+                            <a href="https://github.com/danieldieeins/NEXUS-App-Minecraft-module" target="_blank" class="btn btn-outline-light">Code</a>
+                        </div>
+                    </div>
+
+                    <div class="card" aria-hidden="true" style="flex: 0 0 auto; width: calc(16rem + 2px); overflow: hidden;">
+                        <div class="bg-light-subtle" style="position: relative; height: 9rem; width: 16rem"></div>
+                        <div class="card-body">
+                            <h5 class="card-title placeholder-glow">
+                                <span class="placeholder col-6"></span>
+                            </h5>
+                            <p class="card-text placeholder-glow">
+                                <span class="placeholder col-7"></span>
+                                <span class="placeholder col-4"></span>
+                                <span class="placeholder col-4"></span>
+                                <span class="placeholder col-6"></span>
+                                <span class="placeholder col-8"></span>
+                            </p>
+                            <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+                            <a class="btn btn-outline-light disabled placeholder col-3" aria-disabled="true"></a>
+                        </div>
+                    </div>
+
+                    <div class="card" aria-hidden="true" style="flex: 0 0 auto; width: calc(16rem + 2px); overflow: hidden;">
+                        <div class="bg-light-subtle" style="position: relative; height: 9rem; width: 16rem"></div>
+                        <div class="card-body">
+                            <h5 class="card-title placeholder-glow">
+                                <span class="placeholder col-6"></span>
+                            </h5>
+                            <p class="card-text placeholder-glow">
+                                <span class="placeholder col-7"></span>
+                                <span class="placeholder col-4"></span>
+                                <span class="placeholder col-4"></span>
+                                <span class="placeholder col-6"></span>
+                                <span class="placeholder col-8"></span>
+                            </p>
+                            <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+                            <a class="btn btn-outline-light disabled placeholder col-3" aria-disabled="true"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container d-flex justify-content-center align-items-center" style="padding: 2rem 3rem 1rem 3rem;" id="download">
+            <h2>Download the <strong>NEXUS App</strong></h2>
+        </div>
+        <div class="container d-flex flex-column justify-content-center align-items-center" style="padding: 1rem 1rem 3rem 1rem">
+            <div class="btn-group btn-lg" role="group">
+                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#win" onclick="window.open('https://github.com/danieldieeins/ZyneonApplicationContent/raw/main/i/ZyneonApplication%20Setup.exe', '_blank');">Windows</button>
+                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#lsh">Linux (.sh)</button>
+                <button type="button" class="btn btn-primary btn-lg" onclick="window.open('https://github.com/danieldieeins/NEXUS-App-Minecraft-module/releases/download/v2024.11.1/application-2024.11.1.deb', '_blank');">Linux (.deb)</button>
+                <button type="button" class="btn btn-secondary btn-lg disabled" disabled>macOS</button>
+                <button type="button" class="btn btn-light btn-lg dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">More</button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="https://github.com/zyneonstudios/nexus-app" target="_blank">Repository</a></li>
+                    <li><a class="dropdown-item" href="https://github.com/zyneonstudios/nexus-app/releases/latest" target="_blank">Latest GitHub release</a></li>
+                    <li><a class="dropdown-item" href="https://github.com/danieldieeins/NEXUS-App-Minecraft-module/releases/download/v2024.11.1/application-2024.11.1_default.jar" target="_blank">All operating systems (.jar)</a></li>
+                    <li><a class="dropdown-item bg-dark-subtle disabled" aria-disabled="true" disabled>↑ Requires Java 21 ↓</a></li>
+                    <li><a class="dropdown-item" href="https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html" target="_blank">Download Java 21 from Oracle</a></li>
+                </ul>
+            </div>
+        </div>
+        <footer class="d-flex flex-column justify-content-center align-items-center text-center p-4 bg-black text-white bg-opacity-75">
+            <span><a href="https://nerofy.de/rechtliches#impressum">Imprint</a><a href="https://nerofy.de/rechtliches"> and </a><a href="https://nerofy.de/rechtliches#datenschutz">Privacy Policy</a></span>
+            <br>©copyright Zyneon Studios. All rights reserved.
+        </footer>
+
+        <div class="modal fade" id="lsh" tabindex="-1" aria-labelledby="lshm" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="lshm">NEXUS App for Linux (.sh)</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <strong>Requirements</strong><br>
+                        bash, root (sudo) access and an internet connection<br>
+                        <br>
+                        <strong>Installation</strong><br>
+                        If you have <a href="https://curl.se/" target="_blank">curl</a> installed, run the following command:
+                        <pre class="m-2 p-3 bg-dark-subtle" style="border-radius: 4px;">curl -S https://b.nerotv.live/zyneon/nexus/app/linux/install.sh | bash</pre>
+                        If not, install it, or run the script manually.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-light" onclick="window.open('https://b.nerotv.live/zyneon/nexus/app/linux/install.sh', '_blank')">See script</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="win" tabindex="-1" aria-labelledby="winm" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="winm">NEXUS App for Windows</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Thank you for downloading the NEXUS App <3<br>
+                        <br>
+                        <strong>Requirements</strong><br>
+                        Windows 10/11<br>
+                        <br>
+                        <strong>Warning</strong><br>
+                        Unfortunately, our Windows installer (the .exe file) is not signed. This means your browser and computer might flag it as unsafe since they don't recognize the origin. This is because it's too expensive for us to have the .exe file signed. If you're not comfortable trusting the file, click 'More' and select the .jar file.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-light" onclick="window.open('https://github.com/danieldieeins/NEXUS-App-Minecraft-module/releases/download/v2024.11.1/application-2024.11.1_default.jar', '_blank')">.jar file</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+    <script>
+        window.matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change',() => {
+                updateTheme();
+            })
+
+        function updateTheme() {
+            let theme = null;
+            if(localStorage.getItem('theme')) {
+                theme = localStorage.getItem('theme');
+            }
+            if ((window.matchMedia('(prefers-color-scheme: dark)').matches||theme==="dark")&&theme!=="light") {
+                document.body.setAttribute('data-bs-theme', 'dark');
+            } else {
+                document.body.setAttribute('data-bs-theme', 'dark');
+            }
+        }
+
+        updateTheme();
+    </script>
+</html>
