@@ -10,7 +10,16 @@
         <script src="assets/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
         <style>
+            .title-buttons a {
+                border: transparent;
+                background: black;
+                max-height: calc(2rem - 1px) !important;
+                overflow: hidden;
+            }
 
+            .title-buttons a:hover {
+                background: var(--bs-dark-bg-subtle);
+            }
         </style>
     </head>
     <body data-bs-theme="dark">
@@ -63,60 +72,83 @@
                 </div>
             </div>
         </header>
-        <div class="container d-flex justify-content-center align-items-center" style="padding: 2rem 3rem 1rem 3rem;" id="about">
-            <h2>About the <strong>NEXUS App</strong></h2>
-        </div>
-        <div class="container d-flex gap-5 flex-column flex-md-row justify-content-center align-items-center" style="padding: 1rem 1rem 3rem 1rem">
-            <div class="p-2" style="width: 50%; max-width: 50%; position: relative; overflow: hidden;">
-                <img alt="Screenshot of the NEXUS App" src="assets/img/app-screenshot.png" style="width: 100%; height: 100%; box-shadow: 0.2rem 0.2rem 0.4rem #00000075;">
+        <div id="about-container" class="bg-dark-subtle" style="box-shadow: 0 0 0.75rem #00000090;">
+            <div class="container d-flex justify-content-center align-items-center" style="padding: 2rem 3rem 1rem 3rem;" id="about">
+                <h2>About the <strong>NEXUS App</strong></h2>
             </div>
-            <div style="max-width: 50%; width: 50%;">
-                <div class="accordion" id="faq" style="border-radius: 4px; overflow: hidden; box-shadow: 0.2rem 0.2rem 0.4rem #00000075;">
-                    <div class="accordion-item bg-dark-subtle active">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button bg-dark-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                What's the NEXUS App?
-                            </button>
-                        </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faq">
-                            <div class="accordion-body">
-                                <strong>The NEXUS App</strong> started as a Minecraft launcher with the goal of unifying our own index "NEX", based on Zyndex, with CurseForge and Modrinth into a single program. We still maintain these functions with the <a href="https://github.com/danieldieeins/NEXUS-App-Minecraft-module" target="_blank">a Minecraft module</a> module by nerotvlive.
-                                <strong>However</strong>, the NEXUS App is now much more, as we've overhauled it from the ground up and refocused it to be a modular desktop program. This allows the app to serve as a central hub, <code>a "Nexus"</code>, for everything, as it can be expanded in any "direction".
+            <div class="container d-flex gap-5 flex-column flex-md-row justify-content-center align-items-center" style="padding: 1rem 1rem 3rem 1rem">
+                <div class="p-2" style="width: 50%; max-width: 50%; position: relative; overflow: hidden;">
+                    <img alt="Screenshot of the NEXUS App" src="assets/img/app-screenshot.png" style="width: 100%; height: 100%; box-shadow: 0.2rem 0.2rem 0.4rem #00000075;">
+                </div>
+                <div style="max-width: 50%; width: 50%;">
+                    <div class="accordion" id="faq" style="border-radius: 4px; overflow: hidden; box-shadow: 0.2rem 0.2rem 0.4rem #00000075;">
+                        <div class="accordion-item bg-dark-subtle active">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button bg-dark-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    What's the NEXUS App?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                                <div class="accordion-body">
+                                    <strong>The NEXUS App</strong> started as a Minecraft launcher with the goal of unifying our own index "NEX", based on Zyndex, with CurseForge and Modrinth into a single program. We still maintain these functions with the <a href="https://github.com/danieldieeins/NEXUS-App-Minecraft-module" target="_blank">a Minecraft module</a> module by nerotvlive.
+                                    <strong>However</strong>, the NEXUS App is now much more, as we've overhauled it from the ground up and refocused it to be a modular desktop program. This allows the app to serve as a central hub, <code>a "Nexus"</code>, for everything, as it can be expanded in any "direction".
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item bg-dark-subtle">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed bg-dark-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                What is meant by "modular"?
-                            </button>
-                        </h2>
-                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faq">
-                            <div class="accordion-body">
-                                <strong>By "modular"</strong>, we mean that we've equipped the <strong>NEXUS App</strong> with a public and documented <a href="https://nexus.zyneonstudios.org/docs/application-api/about" target="_blank">API</a>, which allows the development of add-on content for the program. The app itself is just a small core optimized to integrate the APIs and load the modules, but it optionally comes with what we consider to be the most recommendable modules available for the app.
-                                <br><strong>In short:</strong> The app's modular structure allows it to do <code>anything</code> a module developer wants to implement. Be it launching games, executing commands, wrapping other programs, or even doing something remotely.
+                        <div class="accordion-item bg-dark-subtle">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    What is meant by "modular"?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faq">
+                                <div class="accordion-body">
+                                    <strong>By "modular"</strong>, we mean that we've equipped the <strong>NEXUS App</strong> with a public and documented <a href="https://nexus.zyneonstudios.org/docs/application-api/about" target="_blank">API</a>, which allows the development of add-on content for the program. The app itself is just a small core optimized to integrate the APIs and load the modules, but it optionally comes with what we consider to be the most recommendable modules available for the app.
+                                    <br><strong>In short:</strong> The app's modular structure allows it to do <code>anything</code> a module developer wants to implement. Be it launching games, executing commands, wrapping other programs, or even doing something remotely.
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="accordion-item bg-dark-subtle">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed bg-dark-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Who can create modules?
-                            </button>
-                        </h2>
-                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faq">
-                            <div class="accordion-body">
-                                <strong>You, us - everyone</strong>. The NEXUS App is an <code>open-source</code> program with a <a href="https://nexus.zyneonstudios.org/docs/application-api/about" target="_blank">public and documented API</a>. Anyone who's interested in exploring the subject has the opportunity to develop modules for the app.
-                                <br><br><br>
+                        <div class="accordion-item bg-dark-subtle">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed bg-dark-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Who can create modules?
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faq">
+                                <div class="accordion-body">
+                                    <strong>You, us - everyone</strong>. The NEXUS App is an <code>open-source</code> program with a <a href="https://nexus.zyneonstudios.org/docs/application-api/about" target="_blank">public and documented API</a>. Anyone who's interested in exploring the subject has the opportunity to develop modules for the app.
+                                    <br><br><br>
 
-                                <button class="btn btn-primary m-1" type="button" data-bs-toggle="modal" onclick="location.href = 'https://nexus.zyneonstudios.org/docs/application-api/about';">Learn how to create a module</button><button class="btn btn-outline-light m-1" type="button" data-bs-toggle="modal" onclick="location.href = '#modules';">Explore modules</button>
+                                    <button class="btn btn-primary m-1" type="button" data-bs-toggle="modal" onclick="location.href = 'https://nexus.zyneonstudios.org/docs/application-api/about';">Learn how to create a module</button><button class="btn btn-outline-light m-1" type="button" data-bs-toggle="modal" onclick="location.href = '#modules';">Explore modules</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="bg-dark-subtle" style="box-shadow: 0 0 1rem #00000099;">
+        <div id="web-preview">
+            <div class="container d-flex justify-content-center align-items-center" style="padding: 2rem 3rem 1rem 3rem;" id="preview">
+                <h2><strong>NEXUS App</strong> web preview</h2>
+            </div>
+            <div class="container position-relative d-flex gap-4 flex-row flex-md-row justify-content-center align-items-center" style="padding: 1rem 1rem 3rem 1rem">
+                <div id="app" class="flex-column bg-black w-100 rounded-3 overflow-hidden shadow" style="display: flex; height: 45rem; border: 1px solid var(--bs-border-color);">
+                    <div class="titlebar d-flex" style="height: calc(2rem + 1px); overflow: hidden;">
+                        <p class="m-1">NEXUS App</p>
+                        <div class="title-buttons d-flex m-0 position-absolute" style="right: calc(1rem + 1px);">
+                            <a class="btn btn-dark p-1 m-0 d-flex justify-content-center align-items-center" onclick="document.getElementById('app').style.display = 'none'; document.getElementById('open-app').style.display = 'unset';" style="text-decoration: none; width: 2rem;"><i class="bi bi-dash"></i></a>
+                            <a class="btn btn-dark p-1 m-0 d-flex justify-content-center align-items-center" onclick="location.href = 'app';" style="text-decoration: none; width: 2rem;"><i class="bi bi-app"></i></a>
+                            <a id='close-app' class="btn btn-dark p-1 m-0 justify-content-center align-items-center" onclick="document.getElementById('web-preview').style.display = 'none'; document.getElementById('about-container').className = '';" href="#about" style="text-decoration: none; width: 2rem;"><i class="bi bi-x-lg"></i></a>
+                        </div>
+                    </div>
+                    <iframe class="w-100 h-100" src="https://app.nexus.zyneonstudios.de/?page=discover.html&menu=true">
+
+                    </iframe>
+                </div>
+                <button id="open-app" type="button" class="btn btn-primary" style="display: none;" onclick="document.getElementById('app').style.display = 'flex'; this.style.display = 'none';">Show NEXUS App</button>
+            </div>
+        </div>
+        <div class="bg-dark-subtle" style="box-shadow: 0 0 0.75rem #00000090;">
             <div class="container d-flex justify-content-center align-items-center" style="padding: 2rem 3rem 1rem 3rem;" id="modules">
                 <h2>Explore <strong>Modules</strong></h2>
             </div>
@@ -284,6 +316,15 @@
         updateTheme();
 
         addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(document.location.search);
+            if(urlParams.has('app')) {
+                if(urlParams.get('app').toLowerCase()==="closed") {
+                    document.getElementById('close-app').click();
+                    window.history.pushState({}, document.title, window.location.pathname+"#about");
+                }
+            }
+
+
             const userAgent = navigator.userAgent.toLowerCase();
             const button = document.getElementById("download-button");
             if (userAgent.includes('windows')) {
