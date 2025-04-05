@@ -182,19 +182,19 @@
             <h2>Download the <strong>NEXUS App</strong></h2>
         </div>
         <div class="container d-flex flex-column justify-content-center align-items-center" style="padding: 1rem 1rem 3rem 1rem">
-            <div class="d-flex m-4 gap-3">
+            <div class="d-flex m-4 gap-3" style="margin-top: 0 !important;">
                 <button id="download-button" class="btn btn-primary shadow fs-4 p-3"><i class="bi bi-question-lg"></i> Download for ${system}</button>
             </div>
-            <button onclick="this.remove();" class="btn btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#downloads" aria-expanded="false" aria-controls="downloads">
+            <button id="download-all" onclick="this.remove();" class="btn btn-outline-light" type="button" data-bs-toggle="collapse" data-bs-target="#downloads" aria-expanded="false" aria-controls="downloads">
                 See all downloads
             </button>
 
-            <div class="collapse card shadow overflow-hidden rounded-2" id="downloads">
+            <div class="collapse card shadow" id="downloads">
                 <div class="card card-body">
-                    <div class="btn-group btn-lg" role="group">
-                        <button id="download-windows" type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#win" onclick="window.open('https://github.com/danieldieeins/ZyneonApplicationContent/raw/main/i/ZyneonApplication%20Setup.exe', '_blank');"><i class="bi bi-microsoft"></i> Windows</button>
-                        <button id="download-linux-script" type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#lsh"><i class="bi bi-terminal"></i> Linux (.sh)</button>
-                        <button id="download-linux" type="button" class="btn btn-primary btn-lg" onclick="window.open('https://github.com/danieldieeins/NEXUS-App-Minecraft-module/releases/download/v2024.11.1/application-2024.11.1.deb', '_blank');"><i class="bi bi-terminal"></i> Linux (.deb)</button>
+                    <div class="btn-group btn-lg bg-light" role="group">
+                        <button id="download-windows" type="button" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#win" onclick="window.open('https://github.com/danieldieeins/ZyneonApplicationContent/raw/main/i/ZyneonApplication%20Setup.exe', '_blank');"><i class="bi bi-microsoft"></i> Windows</button>
+                        <button id="download-linux-script" type="button" class="btn btn-light btn-lg" data-bs-toggle="modal" data-bs-target="#lsh"><i class="bi bi-terminal"></i> Linux (.sh)</button>
+                        <button id="download-linux" type="button" class="btn btn-secondary btn-lg" onclick="window.open('https://github.com/danieldieeins/NEXUS-App-Minecraft-module/releases/download/v2024.11.1/application-2024.11.1.deb', '_blank');"><i class="bi bi-terminal"></i> Linux (.deb)</button>
                         <button id="download-macos" type="button" class="btn btn-secondary btn-lg disabled" disabled><i class="bi bi-apple"></i> macOS</button>
                         <button id="download-more" type="button" class="btn btn-light btn-lg dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">More</button>
                         <ul class="dropdown-menu">
@@ -285,26 +285,30 @@
 
         addEventListener("DOMContentLoaded", () => {
             const userAgent = navigator.userAgent.toLowerCase();
-            console.log(userAgent)
             const button = document.getElementById("download-button");
             if (userAgent.includes('windows')) {
                 button.onclick = function() {
                     document.getElementById("download-windows").click();
                 };
+                document.getElementById("download-windows").style.display = "none";
                 button.innerHTML = "<i class=\"bi bi-microsoft\"></i> Download for Windows";
+                document.getElementById("download-linux-script").classList.add("rounded-2");
             } else if (userAgent.includes('linux')) {
                 button.onclick = function() {
                     document.getElementById("download-linux").click();
                 };
+                document.getElementById("download-linux").style.display = "none";
                 button.innerHTML = "<i class=\"bi bi-terminal\"></i> Download for Linux (.deb)";
                 const button_sh = button.cloneNode(true);
                 button.parentElement.appendChild(button_sh);
                 button_sh.onclick = function() {
                     document.getElementById("download-linux-script").click();
                 };
+                document.getElementById("download-linux-script").style.display = "none";
                 button_sh.innerHTML = "<i class=\"bi bi-terminal\"></i> Download for Linux (.sh)";
             } else {
-                button.remove();
+                button.parentElement.remove();
+                document.getElementById("download-all").click();
             }
         });
     </script>
