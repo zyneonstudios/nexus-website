@@ -1,172 +1,44 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <title>Nexus | Zyneon Studios</title>
-        <link rel="icon" type="image/webp" href="assets/img/icon.png"/>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-        <style>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>Aktuell nicht erreichbar</title>
+    <style>
+        body {
+            background: black;
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
 
-        </style>
-    </head>
-    <body data-bs-theme="dark">
-        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgba(var(--bs-body-bg-rgb), 0.75); backdrop-filter: blur(16px); box-shadow: 0 0 1rem #00000080;">
-            <div class="container">
-                <div class="navbar-brand d-flex align-items-center justify-content-center" style="position: relative;">
-                    <img src="assets/img/icon.png" style="position: absolute; height: 42px; left: 0; top: 0;" alt="...">
-                    <strong style="margin-left: 3rem;">Zyneon Nexus</strong>
-                </div>
-                <div class="collapse navbar-collapse justify-content-end">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Projects
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="app.html">NEXUS App</a></li>
-                                <li><a class="dropdown-item" href="zyndex.html">Zyndex (Manager)</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown" style="margin-right: 1rem;">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Docs
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="https://nexus.zyneonstudios.org/docs/application-api/about">NEXUS App API Documentation</a></li>
-                                <li><a class="dropdown-item" href="https://nexus.zyneonstudios.org/docs/zyndex/about">Zyndex Documentation</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" onclick="window.location.href = 'app.html';">Get the NEXUS App</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <header style="background-image: url('assets/img/background.png'); background-size: cover; background-position: center; height: 100vh;">
-            <div class="d-flex flex-column justify-content-center align-items-center text-center text-white" style="background: #00000050; position: absolute; width: 100%; height: 100%; backdrop-filter: blur(8px); z-index: 0;">
-                <h1 class="display-3 fw-bold">Zyneon Nexus</h1>
-                <h2 class="display-6">The development team of Zyneon Studios.</h2>
-                <div class="buttons d-flex justify-content-center align-items-center" style="margin-top: 1rem;">
-                    <button class="btn btn-outline-light m-1" type="button" data-bs-toggle="modal" onclick="window.open('https://github.com/orgs/zyneonstudios/repositories','_blank')">GitHub</button>
-                    <button class="btn btn-primary m-1" type="button" data-bs-toggle="modal" onclick="location.href = 'app.html';">NEXUS App</button>
-                    <button class="btn btn-light m-1" type="button" data-bs-toggle="modal" onclick="location.href = 'https://zyneonstudios.org';">Back</button>
-                </div>
-            </div>
-        </header>
-        <footer class="d-flex flex-column justify-content-center align-items-center text-center p-4 bg-black text-white bg-opacity-75">
-            <span><a href="https://nerofy.de/rechtliches#impressum">Imprint</a><a href="https://nerofy.de/rechtliches"> and </a><a href="https://nerofy.de/rechtliches#datenschutz">Privacy Policy</a></span>
-            <br>©copyright Zyneon Studios. All rights reserved.
-        </footer>
-
-        <div class="modal fade" id="404" tabindex="-1" aria-labelledby="404-modal" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="404-modal">404: Not found...</h5>
-                        <button onclick="location.href = 'index.html';" type="button" class="btn-close" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body" id="body404">
-                        Unfortunately, we couldn't find this page.<br>It may never have existed, or it might have been moved or deleted. <strong>Sorry :/</strong><br><br>
-
-                        <strong>Random cat image to calm down:</strong>
-                        <img style="border-radius: 4px; box-shadow: 0 0 0.4rem #000000" id="cat" width="100%" alt="random cat image" src="https://cataas.com/cat">
-                    </div>
-                    <div class="modal-footer">
-                        <button onclick="refreshCat();" type="button" class="btn btn-outline-light">Refresh cat</button>
-                        <button onclick="location.href = 'index.html';" type="button" class="btn btn-danger">Okay</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="modal fade" id="naa" tabindex="-1" aria-labelledby="naam" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="naam">Authentication started!</h5>
-                        <button data-bs-dismiss="modal" type="button" class="btn-close" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        You can close this tab/window now!<br>
-                        <br>
-                        <strong>Oh, by the way:</strong><br>
-                        Thank you for using the NEXUS App!^^
-                    </div>
-                    <div class="modal-footer">
-                        <button data-bs-dismiss="modal" type="button" class="btn btn-success">Okay</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </body>
-    <script>
-        window.matchMedia('(prefers-color-scheme: dark)')
-            .addEventListener('change',() => {
-                updateTheme();
-            })
-
-        function updateTheme() {
-            let theme = null;
-            if(localStorage.getItem('theme')) {
-                theme = localStorage.getItem('theme');
+            iframe {
+                position: absolute;
+                border: none;
+                width: 100%;
+                height: 100%;
             }
-            if ((window.matchMedia('(prefers-color-scheme: dark)').matches||theme==="dark")&&theme!=="light") {
-                document.body.setAttribute('data-bs-theme', 'dark');
-            } else {
-                document.body.setAttribute('data-bs-theme', 'dark');
+
+            .footer {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                color: #bfbfbf;
+                text-align: center;
+                padding: 1rem 0;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
             }
         }
 
-        updateTheme();
-
-        document.addEventListener('DOMContentLoaded', function() {
-            let error404 = false;
-            const urlParams = new URLSearchParams(window.location.search);
-            if (window.location.hash.includes('#404')) {
-                error404 = true;
-            } else if(urlParams.has("popup")) {
-                if(urlParams.get("popup")==="404") {
-                    error404 = true;
-                }
-            }
-
-            if(error404) {
-                document.title = "404 | Zyneon Nexus";
-                document.getElementById("404").addEventListener('hidden.bs.modal', function (event) {
-                    document.title = "Nexus | Zyneon Studios";
-                });
-                new bootstrap.Modal(document.getElementById('404')).show("404");
-            } else {
-                let authenticated = false;
-                if (window.location.hash.includes('#authenticated')) {
-                    authenticated = true;
-                } else if(urlParams.has("popup")) {
-                    if(urlParams.get("popup")==="authenticated") {
-                        authenticated = true;
-                    }
-                }
-                if(authenticated) {
-                    document.title = "Successfully authenticated | Zyneon Nexus";
-                    document.getElementById("naa").addEventListener('hidden.bs.modal', function (event) {
-                        document.title = "Nexus | Zyneon Studios";
-                    });
-                    new bootstrap.Modal(document.getElementById('naa')).show("naa");
-                }
-            }
-        });
-
-        function refreshCat() {
-            location.reload();
-        }
-    </script>
+    </style>
+</head>
+<body>
+<iframe src="https://nerofy.de/zyneon"></iframe>
+<div class="footer">
+    <p><a href="https://nerofy.de/rechtliches" target="_blank">Impressum und Datenschutzerklärung</a><br>
+    ©copyright <a href="https://nerofy.de">Nerofy Netzwerk</a>. Alle Rechte vorbehalten.</p>
+</div>
+</body>
 </html>
