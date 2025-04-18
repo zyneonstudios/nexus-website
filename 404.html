@@ -1,44 +1,74 @@
-<html lang="">
-<head>
-    <meta charset="UTF-8">
-    <title>Aktuell nicht erreichbar</title>
-    <style>
-        body {
-            background: black;
-            padding: 0;
-            margin: 0;
-            font-family: sans-serif;
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Redirecting...</title>
+        <meta http-equiv="refresh" content="0;url=https://nexus.nrfy.net">
+        <meta http-equiv="refresh" content="1;url=https://nexus.nrfy.net">
+        <meta http-equiv="refresh" content="3;url=https://nexus.nrfy.net">
+        <style>
+            body {
+                background: #121212;
+                padding: 0;
+                margin: 0;
+                font-family: sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-            iframe {
-                position: absolute;
-                border: none;
-                width: 100%;
-                height: 100%;
-            }
+                .card {
+                    background: #ffffff15;
+                    height: fit-content;
+                    width: fit-content;
+                    padding: 2rem;
+                    border-radius: 1rem;
+                    margin: 1rem;
+                    border: 1px solid #ffffff20;
+                    box-shadow: 0 0 1rem #00000075;
 
-            .footer {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                color: #bfbfbf;
-                text-align: center;
-                padding: 1rem 0;
+                    a {
+                        transition: all 0.15s ease;
+                        padding: 1rem;
+                        background: #ffffff50;
+                        border-radius: 1rem;
+                        border: 1px solid #ffffff75;
+                        text-decoration: none;
+                        color: black;
+                    }
 
-                a {
-                    text-decoration: none;
-                    color: white;
+                    a:hover {
+                        background: #ffffff75;
+                        border: 1px solid #ffffff;
+                    }
+                }
+
+                .footer {
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    color: #bfbfbf;
+                    text-align: center;
+                    padding: 1rem 0;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
                 }
             }
-        }
 
-    </style>
-</head>
-<body>
-<iframe src="https://nerofy.de/zyneon"></iframe>
-<div class="footer">
-    <p><a href="https://nerofy.de/rechtliches" target="_blank">Impressum und Datenschutzerklärung</a><br>
-    ©copyright <a href="https://nerofy.de">Nerofy Netzwerk</a>. Alle Rechte vorbehalten.</p>
-</div>
-</body>
+        </style>
+    </head>
+    <body>
+    <script>
+        window.location.href = "https://nexus.nrfy.net";
+    </script>
+    <div class="card">
+        <a href="https://nexus.nrfy.net">Click here if you weren't automatically redirected</a>
+    </div>
+    <div class="footer">
+        <p><a href="https://nerofy.de/rechtliches" target="_blank">Impressum und Datenschutzerklärung</a><br>
+        ©copyright <a href="https://nerofy.de">Nerofy Netzwerk</a>. Alle Rechte vorbehalten.</p>
+    </div>
+    </body>
 </html>
